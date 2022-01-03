@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+  <head>    
+    <meta charset="utf-8"> 
+  </head>
+  <body>
+<ul>
+{% for item in items %}
+<li>
+  <h3>{{ item.name }}</h3>
+  <p>{{ item.description }}</p>
+  <p>id: {{ item.pk }}</p>
+  <p><i> {{ item.category.name }} </i></p>
+  <p><i> {{ item.category.slug }} </i></p>
+</li>
+{% empty %}
+без контента
+{% endfor %}
+
+  </body>
+</html>
